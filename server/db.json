@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "email": "shohijahonmusinkulov@gmail.com",
+      "password": "$2a$10$CmmYlM8Wf3N5Z0UlOYJOq.3T.buxwtci2B/m9MzQj3/CklSJ2rfBa",
+      "name": "Shohijahon",
+      "lastname": "Musinkulov",
+      "id": 1
+    }
+  ],
+  "tovars": [
+    {
+      "id": 1,
+      "name": "Book",
+      "price": 10.99,
+      "image": "../../Settings/assets/images/book.jpg",
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "name": "Computer",
+      "price": 1199,
+      "image": "../../Settings/assets/images/computer.jpg",
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "name": "Banana",
+      "price": 1.05,
+      "image": "../../Settings/assets/images/banana.jpg",
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "name": "Car",
+      "price": 14000,
+      "image": "../../Settings/assets/images/car.jpg",
+      "quantity": 0
+    }
+  ]
+}

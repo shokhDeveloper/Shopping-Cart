@@ -1,0 +1,20 @@
+.application__header{
+    background: rgb(219, 219, 219);
+    position: fixed;
+    width: 100%;
+    z-index: 11111;
+
+}
+.application__col{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+}
+.link{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.link__active{
+    text-decoration: underline;
+}
