@@ -1,0 +1,55 @@
+.bar__overlay{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.bar__sidebar{
+
+    width: 700px !important;
+}
+.bar__inner{
+    margin-top: 1rem;
+    height: 650px;
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.sidebar__top{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sidebar__top button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.tovar{
+    width: 100%;
+    display: grid;
+    grid-template: repeat(1, auto) / repeat(2, 50%);
+    align-items: center;
+}
+.tovar__image{
+    height: 200px !important;
+    object-fit: cover;
+}
+.tovar  button{
+    position: absolute;
+    right: 0;
+}
+.tovar__col{
+    width: 100%;
+}
+.tovar__bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+.tovar__bottom span{
+    margin: 0 0.5rem;
+}

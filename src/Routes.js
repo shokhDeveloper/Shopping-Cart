@@ -15,16 +15,16 @@ export const router = createBrowserRouter(
         <>
           <Route path="/" element={<Home />} />
           <Route path="by-redux/*" element={<ByRedux />}>
-            <Route index element={<h1>Home</h1>} />
+            <Route index element={<Store/>} />
             <Route path="home" element={<Store/>}/>
             <Route path="store" element={<Store/>} />
-            <Route path="about" element={<h1>About</h1>} />
+            <Route path="about" element={<Store/>} />
           </Route>
           <Route path="by-libary/*" element={<ByLibary />}>
-            <Route index element={<h1>Home</h1>} />
+            <Route index element={<Store/>} />
             <Route path="store" element={<Store/>} />
-            <Route path="home" element={<h1>Home</h1>}/>
-            <Route path="about/*" element={<h1>About</h1>} />
+            <Route path="home" element={<Store/>}/>
+            <Route path="abou/*" element={<Store/>} />
           </Route>
         </>
       ) : (

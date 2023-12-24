@@ -6,3 +6,4 @@ export * from "./Modal";
 export * from "./Authentication";
 export * from "./GoogleAuth";
 export * from "./HeaderApp";
+export * from "./Bar";

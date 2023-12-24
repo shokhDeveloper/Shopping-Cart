@@ -6,7 +6,6 @@ import Book from "../assets/images/book.jpg";
 import Computer from "../assets/images/computer.jpg";
 import Banana from "../assets/images/banana.jpg";
 import Car from "../assets/images/car.jpg"
-import { parse } from "path";
 type GenericsValue<T> = T | null
 export interface InitialStateInterface {
     token: GenericsValue<string>,
@@ -106,7 +105,10 @@ export const slice = createSlice({
                 console.log(error);
               }
         },
+        setDeleteTovar(state, action:PayloadAction<TypeTovar>){
+            state.shoppingCart = state.shoppingCart.filter((item:TypeTovar) => item.id !== action.payload.id)
+        }
     }
 })
-export const {setToken, setUser, setCloseLoader, setOpenLoader, setGoogleUser, setApplicationType, setTovars, setAddTovar, setTovarDecCount, setTovarIncCount}  = slice.actions
+export const {setToken, setUser, setCloseLoader, setOpenLoader, setGoogleUser, setApplicationType, setTovars, setAddTovar, setTovarDecCount, setTovarIncCount, setDeleteTovar}  = slice.actions
 export const Reducer = slice.reducer

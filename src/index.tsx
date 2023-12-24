@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { Provider } from 'react-redux';
 import { ContextProvider, store } from './Settings';
-import { CartProvider } from 'react-use-cart';
+
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { CartProvider } from 'react-use-cart';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 const queryClient = new QueryClient()
 root.render(
-  <Provider store={store}>
-    <CartProvider>
+  <CartProvider>
+    <Provider store={store}>
       <ContextProvider>
-        <QueryClientProvider client={queryClient}>
-        <App />
-        </QueryClientProvider>
+          <QueryClientProvider client={queryClient}>
+            <App />
+          </QueryClientProvider>
       </ContextProvider>
-    </CartProvider>
-  </Provider>
-);
+    </Provider>
+  </CartProvider>
+  );

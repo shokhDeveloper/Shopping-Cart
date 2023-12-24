@@ -1,6 +1,6 @@
 import ComponentModue from "../comp.module.css";
 import React, { useCallback, useContext, useEffect } from "react";
-import {  HeaderApp, Layout } from "../../Components";
+import {  Bar, HeaderApp, Layout } from "../../Components";
 import {  Col, FloatButton, Row } from "antd";
 import {  Outlet } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa"
@@ -9,10 +9,10 @@ import { useSelector } from "react-redux";
 
 export const ByRedux: React.FC = (): JSX.Element => {
     const {shoppingCart}:InitialStateInterface = useSelector(({Reducer}) => Reducer)
-    const {sumItems, setSumItems}:myContext = useContext(Context)
+    const {sumItems, setSumItems, setBarOverlay}:myContext = useContext(Context)
     const { back, type } = useBack(true)
     const handleClick = (): void => {
-        console.log("ishladi")
+        setBarOverlay(true)
     }
     useEffect(() => {
         if (type) {
@@ -31,6 +31,7 @@ export const ByRedux: React.FC = (): JSX.Element => {
                     </FloatButton.Group>
                 </Col>
             </HeaderApp>
+            <Bar/>
             <Outlet />
         </Layout>
     )
